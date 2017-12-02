@@ -1,6 +1,6 @@
 /**
  * Tevent v1.0.0 - tevent - Event Template
- * @link 
+ * @link
  * @copyright 2016-2017 ThemeBucket
  * @license ISC
  */
@@ -346,7 +346,7 @@
      Countdown
      ===============================================*/
 
-    $('#counting-date').countdown('2020/10/10').on('update.countdown', function(event) {
+    $('#counting-date').countdown('2018/01/27').on('update.countdown', function(event) {
         var $this = $(this).html(event.strftime(''
         + '<div class="count-block"><h2 class="u-FontSize50">%D</h2> <span>Days</span> </div>'
         + '<div class="count-block"><h2 class="u-FontSize50">%H</h2> <span>Hours</span> </div>'
