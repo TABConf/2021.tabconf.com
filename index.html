@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html class="html">
+
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -20,9 +21,8 @@
     <link rel="stylesheet" href="assets/vendor/swiper/css/swiper.min.css">
     <link rel="stylesheet" href="assets/css/main.min.css">
     <!-- endinject -->
-
-
 </head>
+
 <body>
 
     <!--header start-->
@@ -55,24 +55,25 @@
                 <div class="collapse navbar-collapse" id="navbar-menu">
                     <ul class="nav navbar-nav navbar-right" data-in="" data-out="">
                         <li class="dropdown">
-                            <a href="index.html" data-toggle="dropdown" >Home</a>
+                            <a href="#main">Home</a>
                         </li>
+                        <li class="dropdown">
+                            <a href="#about">about</a>
+                        </li>
+                        <!--
                         <li class="dropdown">
                             <a href="#" data-toggle="dropdown" >Schedule</a>
                         </li>
 
                         <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" >Speakers</a>
+                            <a href="#" data-toggle="dropdown" >Speakers</a>
                             <!--<ul class="dropdown-menu">
                                 <li><a href="speakers-grid.html">Example</a></li>
-                            </ul>-->>
+                            </ul>
                         </li>
-
+                        -->
                         <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" >Sponsors</a>
-                            <!--<ul class="dropdown-menu">
-                                <li><a href="become-sponsors.html">Example</a></li>
-                            </ul>-->
+                            <a href="#sponsors">Sponsors</a>
                         </li>
 
                     </ul>
@@ -85,7 +86,7 @@
     <!--header end-->
 
     <!--hero section start-->
-    <section class="ImageBackground ImageBackground--overlay js-FullHeight js-Parallax" data-overlay="5">
+    <section id="main" class="ImageBackground ImageBackground--overlay js-FullHeight js-Parallax" data-overlay="5">
         <div class="ImageBackground__holder">
             <img src="assets/imgs/banner/backgroundTabconf2018.jpg" alt=""/>
         </div>
@@ -114,7 +115,7 @@
     <section class=" u-PaddingTop100 u-PaddingBottom100  u-xs-PaddingBottom30 u-xs-PaddingTop30 u-sm-PaddingTop50 u-MarginBottom0 u-zIndex10 position-relative">
         <div class="container">
             <div class="row">
-                <div class="col-md-8 col-md-offset-2 col-sm-12">
+                <div class="col-md-8 col-md-offset-2 col-sm-12" id="about">
                     <h1 class="u-MarginTop0 u-sm-MarginTop30 u-Weight700">About The Event</h1>
                     <p class="u-MarginBottom30 u-xs-MarginBottom30 ">Please join us for TAB's first conference. We will have presentations on various topics surrounding blockchain technology.</p>
 
@@ -1099,81 +1100,6 @@
     </section>
     <!--Event Schedule end-->
 
-    <!--pricing table start
-    <section class="ImageBackground ImageBackground--overlay js-Parallax" data-overlay="2">
-        <div class="ImageBackground__holder">
-            <img src="assets/imgs/banner/TabConfBanner.jpg" alt="...">
-        </div>
-        <div class="container u-PaddingTop100 u-PaddingBottom100">
-            <div class="row">
-                <div class="col-md-4 col-sm-6 text-center u-sm-MarginBottom30">
-                    <div class="u-BoxShadow100">
-                        <div class="Blurb Blurb--wrapper u-BorderRadius6">
-                            <h3 class="u-MarginTop0">Basic</h3>
-                            <div class="u-FontSize50 u-Weight700">
-                                <small class="u-InlineBlock u-VerticalMiddle">$</small>29
-                            </div>
-                            <small class="text-gray text-uppercase">Per Day</small>
-                            <p class="  u-MarginTop35 u-MarginBottom35 u-LineHeight3">
-                                - Entrance
-                                <br>
-                                - Free Lunch & Snacks
-                                <br>
-                                - Custom Badge
-                                <br>
-                                - Certificate
-                            </p>
-                            <a class="btn btn-default u-Weight400" href="#">Buy Ticket</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 col-sm-6 text-center u-sm-MarginBottom30">
-                    <div class="u-BoxShadow100">
-                        <div class=" Blurb--wrapper bg-primary bg-primary--gradient310 u-BorderRadius6">
-                            <h3 class=" u-MarginTop0">Standard</h3>
-                            <div class=" u-FontSize50 u-Weight700">
-                                <small class="u-InlineBlock u-VerticalMiddle">$</small>49
-                            </div>
-                            <small class=" text-uppercase">Per Day</small>
-                            <p class="  u-MarginTop35 u-MarginBottom35 u-LineHeight3">
-                                - Entrance
-                                <br>
-                                - Free Lunch & Snacks
-                                <br>
-                                - Custom Badge
-                                <br>
-                                - Certificate
-                            </p>
-                            <a class="btn btn-shadow u-Weight400" href="#">Buy Ticket</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 col-md-offset-0 col-sm-6 col-sm-offset-3 text-center ">
-                    <div class="u-BoxShadow100">
-                        <div class="Blurb Blurb--wrapper u-BorderRadius6">
-                            <h3 class="u-MarginTop0">Premium</h3>
-                            <div class="u-FontSize50 u-Weight700">
-                                <small class="u-InlineBlock u-VerticalMiddle">$</small>99
-                            </div>
-                            <small class="text-gray text-uppercase">Per Day</small>
-                            <p class="u-MarginTop35 u-MarginBottom35 u-LineHeight3">
-                                - Entrance
-                                <br>
-                                - Free Lunch & Snacks
-                                <br>
-                                - Custom Badge
-                                <br>
-                                - Certificate
-                            </p>
-                            <a class="btn btn-default u-Weight400" href="#">Buy Ticket</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!--pricing table end-->
-
     <!--video & slides start
     <section class="u-PaddingTop100 u-xs-PaddingTop30 u-PaddingBottom100 u-xs-PaddingBottom30 u-BoxShadow40">
         <div class="container">
@@ -1212,17 +1138,18 @@
 
     <!--sponsors start-->
     <section class=" u-PaddingTop100 u-sm-PaddingTop30 u-PaddingBottom100 u-sm-PaddingBottom30">
-        <div class="container">
+        <div class="container" id="sponsors">
             <div class="row">
                 <div class="col-md-12 text-center">
                     <h1 class="u-MarginTop50 u-MarginBottom100 u-sm-MarginBottom30 u-Weight700">Gold Sponsors</h1>
                 </div>
                 <div class="Clients col-lg-12 col-lg-offset-0 col-md-10 col-md-offset-1 text-center u-MarginBottom100 u-xs-MarginBottom30">
-                    <span class="client-border"><img src="assets/imgs/sponsors/storjLogo.png" alt="..." height="100"></span>
-                    <span class="client-border"><img src="assets/imgs/sponsors/foundersLegalLogo.png" alt="..." height="75"></span>
-                    <span class="client-border"><img src="assets/imgs/sponsors/tierionLogo.png" alt="..." height="100"></span>
+                    <a href="https://storj.io/"><span class="client-border"><img src="assets/imgs/sponsors/storjLogo.png" alt="..." height="100"></span></a>
+                    <a href="founderslegal.com"><span class="client-border"><img src="assets/imgs/sponsors/foundersLegalLogo.png" alt="..." height="100"></span></a>
+                    <a href="https://tierion.com/"><span class="client-border"><img src="assets/imgs/sponsors/tierionLogo.png" alt="..." height="100"></span></a>
                 </div>
-<!--
+
+                <!--
                 <div class="col-md-12 text-center">
                     <h1 class="u-MarginTop0 u-MarginBottom30 u-Weight700">Silver Sponsors</h1>
                 </div>
@@ -1231,56 +1158,25 @@
                     <img src="assets/imgs/sponsors/sponsor6.png" alt="..." height="100">
                     <img src="assets/imgs/sponsors/sponsor7.png" alt="..." height="100">
                 </div>
--->
+                -->
+
                 <div class="col-md-12 text-center">
                     <h1 class="u-MarginTop0 u-MarginBottom30 u-Weight700">Bronze Sponsors</h1>
                 </div>
-                <div class="Clients col-lg-12 col-lg-offset-0 col-md-10 col-md-offset-1 text-center">
-                    <img src="assets/imgs/sponsors/prestigeStaffingLogo.png" alt="..." height="100">
-                    <img src="assets/imgs/sponsors/protectingCoinLogo.png" alt="..." height="100">
+
+                <div class="Clients col-lg-12 col-lg-offset-0 col-md-10 col-md-offset-1 text-center u-MarginBottom100 u-xs-MarginBottom30">
+                    <a href="http://www.prestigestaffing.com/"><span class="client-border"><img src="assets/imgs/sponsors/prestigeStaffingLogo.png" alt="..." height="100"></span></a>
+                    <a href="http://protectingcoin.com/"><span class="client-border"><img src="assets/imgs/sponsors/protectingCoinLogo.png" alt="..." height="100"></span></a>
                 </div>
             </div>
         </div>
     </section>
     <!--sponsors end-->
 
-    <!--map start
-    <div class="position-relative">
-        <div id="map" class="map-area"></div>
-        <div class="location-address u-BoxShadow40">
-            <img src="assets/imgs/logo.png" alt="" height="35"/>
-            <h4 class="u-MarginBottom10 u-MarginTop10 u-Weight700">15 - 19 JULY, 2017</h4>
-            <p>West International Conference Center, <br/> San Francisco, CA</p>
-        </div>
-    </div>
-    <!--map end-->
-
-    <!--subscribe start
-    <section class="colorfull-subscribe u-BoxShadow40 u-PaddingTop150 u-sm-PaddingTop50 u-PaddingBottom150 u-sm-PaddingBottom30">
-        <div class="container text-center">
-            <h3 class="u-MarginTop0 u-MarginBottom30 u-Weight700">Sign Up For Our Newsletter </h3>
-            <!--<p class="u-Margin0">Subscribe to get all newsletter and publication.</p>-->
-    <!--
-            <div class="row">
-                <div class="col-md-4 col-md-offset-3 col-sm-8 col-sm-offset-2">
-                    <div class="form-group">
-                        <input class="form-control " placeholder="Enter your email address" type="email">
-                    </div>
-                </div>
-                <div class="col-md-2 col-md-offset-0 col-sm-6 col-sm-offset-3">
-                    <div class="form-group">
-                        <button type="submit" class="btn btn-primary btn-block ">Subscribe</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!--subscribe end-->
-
-    <!--footer start
-    <footer class="bg-darker u-PaddingTop100 u-sm-PaddingTop30 u-PaddingBottom100 u-sm-PaddingBottom30 ">
+    <!--footer start-->
+    <footer class="bg-darker u-PaddingTop15 u-sm-PaddingTop6 u-PaddingBottom15 u-sm-PaddingBottom6 ">
         <div class="container text-center text-sm">
-            <img class="retina u-MarginBottom50 u-sm-MarginBottom30" src="assets/imgs/logo-light.png" alt="">
+            <img class="retina u-MarginBottom10 u-sm-MarginBottom6" src="assets/imgs/logo-light.png" alt="">
             <div class="social-links sl-default light-link solid-link circle-link colored-hover">
                 <a href="https://twitter.com/atl_blockchain?lang=en" class="twitter">
                     <i class="fa fa-twitter"></i>
@@ -1309,26 +1205,6 @@
     <script src="assets/vendor/swiper/js/swiper.min.js"></script>
     <script src="assets/js/main.js"></script>
     <!-- endinject -->
-
-    <!--google map-->
-    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCjCVkU7YnGfown4_i_sm6X36HP2jWTv54&callback=initMap"> </script>
-
-    <script>
-        function initMap() {
-            var location, map, marker;
-
-            location = {lat: 37.773972, lng: -122.431297};
-            map = new google.maps.Map(document.getElementById('map'), {
-                center: location,
-                zoom: 15,
-                scrollwheel:false
-            });
-            marker = new google.maps.Marker({
-                position: location,
-                map: map
-            });
-        }
-    </script>
 
 </body>
 </html>
