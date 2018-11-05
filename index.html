@@ -31,7 +31,20 @@
 		th, td {
 			padding: 12px;
 		}
+		
 	</style>
+	<script>
+	$("#selectAll").click(function () 
+	{
+		
+	});
+
+	function newwin() {              
+		$("#ticketbutton").hide();
+		$("#eventbritebutton").show();
+		$("#cryptobutton").show();
+	}
+	</script>
 </head>
 
 <body>
@@ -49,12 +62,14 @@
 				<h4>Great Speakers, Cheap Tickets, No ICO Pitches</h4>
 				<h6 class="thin base-font">A Blockchain conference of <strong>Substance</strong></h6>
 				<div class="btns-container">
-					<a href="https://www.eventbrite.com/e/tabconf-2019-tickets-50928230709" class="btn btn-md">Pay with eventbrite</a>
+						
+					<a id="ticketbutton" href="#" onclick='newwin()' class="btn btn-md">Tickets</a>
 
+					<a id="eventbritebutton" href="https://www.eventbrite.com/e/tabconf-2019-tickets-50928230709" class="btn btn-md" style="display: none">Credit Card Payment</a>
+					<a id="cryptobutton" href="mailto:hello@tabconf.com?&subject=RSVP%20for%20TABConf2019%20using%20cryptocurrency&body=Hi,%20my%20name%20is%20(fill%20this%20in),%0D%0AI%20work%20for%20(company)%0D%0AMy%20food%20restrictions%20are%20(none)%0D%0AI%20wish%20to%20pay%20in%20(btc/bch/ltc/dash/zcash/doge/eth/etc)%20%20pick%20one%0D%0AI%20heard%20about%20this%20conference%20via%20(fill%20this%20in%20please).%0D%0AI'm%20most%20interested%20in%20(business-legal%20track/Technology%20Track)%0D%0A_____________________________________________%0D%0AThanks ((NOTE!!))%20if%20we%20don't%20send%20an%20invoice%20within%2024%20hours%20please%20reach%20out%20to%20us%20again!%0D%0AAfter%20paying%20the%20invoice%20please%20respond%20immediately%20verifying%20you%20have%20sent%20the%20funds.%20Please%20pay%20the%20invoice%20as%20soon%20as%20possible%20to%20avoid%20problems.%20We%20have%20the%20discretion%20to%20refund%20your%20payment%20minus%20a%20fee%20and%20reissue%20another%20invoice%20if%20payment%20takes%20too%20long." class="btn btn-md" style="display: none">Pay cryptocurrency</a><br>
 					<!--<a href="#" class="btn btn-outline btn-md" data-modal-link="0">VIDEO</a>-->
 				</div>
 				<center>
-						<a href="mailto:hello@tabconf.com?&subject=RSVP%20for%20TABConf2019%20using%20cryptocurrency&body=Hi,%20my%20name%20is%20(fill%20this%20in),%0D%0AI%20work%20for%20(company)%0D%0AMy%20food%20restrictions%20are%20(none)%0D%0AI%20wish%20to%20pay%20in%20(btc/bch/ltc/dash/zcash/doge/eth/etc)%20%20pick%20one%0D%0AI%20heard%20about%20this%20conference%20via%20(fill%20this%20in%20please).%0D%0AI'm%20most%20interested%20in%20(business-legal%20track/Technology%20Track)%0D%0A_____________________________________________%0D%0AThanks ((NOTE!!))%20if%20we%20don't%20send%20an%20invoice%20within%2024%20hours%20please%20reach%20out%20to%20us%20again!%0D%0AAfter%20paying%20the%20invoice%20please%20respond%20immediately%20verifying%20you%20have%20sent%20the%20funds.%20Please%20pay%20the%20invoice%20as%20soon%20as%20possible%20to%20avoid%20problems.%20We%20have%20the%20discretion%20to%20refund%20your%20payment%20minus%20a%20fee%20and%20reissue%20another%20invoice%20if%20payment%20takes%20too%20long." class="btn btn-md">Pay cryptocurrency</a><br>
 					<table><tr>
 						<td><img src="assets/img/cryptocurrency/btc40.png" alt="" class="img-responsive" /></td>
 						<td><img src="assets/img/cryptocurrency/bch40.png" alt="" class="img-responsive" /></td>
