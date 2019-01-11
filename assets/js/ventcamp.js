@@ -453,7 +453,7 @@ Ventcamp = {
                     equalTo: 'Please enter the same password as above'
                 }
             },
-
+            /*
             submitHandler: function (form) {
                 var $input = $(form).find('input[type="submit"]'),
                     $button = $(form).find('button[type="submit"]');
@@ -465,7 +465,7 @@ Ventcamp = {
                     $input.after('<span class="loading fa fa-refresh"></span>');
 
                 }
-
+               
                 $.ajax({
                     url: form.action,
                     type: 'POST',
@@ -481,7 +481,9 @@ Ventcamp = {
                     failHandler(form);
 
                 });
+                
             }
+            */
         };
 
         doneHandler = function (msg, form) {
