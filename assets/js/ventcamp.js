@@ -453,7 +453,7 @@ Ventcamp = {
                     equalTo: 'Please enter the same password as above'
                 }
             },
-            /*
+
             submitHandler: function (form) {
                 var $input = $(form).find('input[type="submit"]'),
                     $button = $(form).find('button[type="submit"]');
@@ -465,7 +465,7 @@ Ventcamp = {
                     $input.after('<span class="loading fa fa-refresh"></span>');
 
                 }
-               
+
                 $.ajax({
                     url: form.action,
                     type: 'POST',
@@ -481,9 +481,7 @@ Ventcamp = {
                     failHandler(form);
 
                 });
-                
             }
-            */
         };
 
         doneHandler = function (msg, form) {
@@ -764,9 +762,9 @@ Ventcamp = {
                 $countdown = $('.countdown');
 
                 // count down 10 days from today
-                // futureDate.setDate( futureDate.getDate() + 10 );
+                futureDate.setDate( futureDate.getDate() + 10 );
                 // or set specific date in the future
-                futureDate = new Date(2019, 1, 9);
+                // futureDate = new Date(2014, 7, 26);
 
                 $countdown.countdown({
                     until: futureDate,

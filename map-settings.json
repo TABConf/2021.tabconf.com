@@ -1,8 +1,6 @@
 {
-	"mapZoom": 14,
-	"markerImagePath": "../assets/img/marker-21x32.png",
-	"markerLatLng": [
-		33.752938,
-		-84.384443
-	]
+	"mapZoom": 15,
+	"markerAddress": "881 7th Ave New York",
+	"offsetX": 100,
+	"offsetY": 10
 }
