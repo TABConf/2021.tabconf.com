@@ -6,6 +6,10 @@ a {
     text-decoration: underline;
 }
 
+#bitpay input[type=submit], #bitpay button {
+    width:100%;
+}
+
 body, html {
     background: #004659;
     background-image: url('../img/tabconf-network.png');
