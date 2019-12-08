@@ -120,6 +120,10 @@ h1 {
     padding: 1rem;
 }
 
+strong {
+    font-weight: 700;
+}
+
 .subtag {
     color: #a6ffcf;
     font-size: 1.5rem;
