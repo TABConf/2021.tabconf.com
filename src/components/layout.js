@@ -9,10 +9,10 @@ import React from "react"
 import PropTypes from "prop-types"
 import ListLink from "./listlink"
 import { useStaticQuery, Link, graphql } from "gatsby"
-import "../styles/style.sass"
 
 import Header from "./header"
 import "./layout.css"
+import "../styles/style.sass"
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`

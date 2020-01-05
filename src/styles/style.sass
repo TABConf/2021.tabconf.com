@@ -1,7 +1,32 @@
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300i,600,600i&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Fira+Mono:400,700&display=swap');
+
+
 $color-blue-dark: #004659
+$color-green: #a6ffcf
+$color-orange: #fc4600
+$color-white: #fff
+
+a
+  color: $color-white
+  text-decoration: underline
+  &:hover
+    color: $color-white
+    text-decoration: underline !important
+
+body, html
+    background: $color-blue-dark
+    color: #fff
+    font-family: 'Source Sans Pro', sans-serif
+    font-weight: 300
 
 #header-main
   background: $color-blue-dark
+  display: flex
+
+  h1
+    flex-basis: 50%
+    max-width: 300px;
 
 #footer-main
   background: $color-blue-dark

@@ -1,18 +1,17 @@
 import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
+import Logo from "../svg/TABConf-2020-Logo_Color-Dark.svg"
 
 import ListLink from "./listlink"
 
 const Header = ({ siteTitle }) => (
   <header id="header-main">
-    <div>
-      <h1>
-        <Link to="/">
-          {siteTitle}
-        </Link>
-      </h1>
-    </div>
+    <h1>
+      <Link to="/">
+        <img src={Logo} alt={siteTitle} />
+      </Link>
+    </h1>
     <nav role="navigation">
       <ul class="nav">
         <ListLink to="/">Home</ListLink>
