@@ -9,7 +9,6 @@ import Camp from "../components/camp"
 const IndexPage = () => (
   <Layout>
     <SEO title="Lightning Camp" />
-    <h1>Hi people</h1>
 
     <Camp title="Lightning Camp" image="https://via.placeholder.com/150" link="/lightning-camp">
       Deploy engineer deliver, share out-of-the-box social applications compelling

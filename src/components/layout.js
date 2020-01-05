@@ -28,48 +28,48 @@ const Layout = ({ children }) => {
   return (
     <>
       <Header siteTitle={data.site.siteMetadata.title} />
-      <div>
+      <div class="container-fluid">
         <main>{children}</main>
-        <footer id="footer-main">
-          <nav>
-            <div class="container">
-              <div class="row">
-                <div class="col-md-3">
-                  <h2>TABConf</h2>
-                  <ul>
-                    <ListLink to="/">Home</ListLink>
-                    <ListLink to="/">Speakers</ListLink>
-                    <ListLink to="/">Register</ListLink>
-                    <ListLink to="/">Contact Us</ListLink>
-                  </ul>
-                </div>
-                <div class="col-md-3">
-                  <h2>Camps</h2>
-                  <ul>
-                    <ListLink to="/lightning-camp">Lightning Camp</ListLink>
-                    <ListLink to="/lightning-camp">Spice Camp</ListLink>
-                    <ListLink to="/lightning-camp">Dapp Camp</ListLink>
-                    <ListLink to="/lightning-camp">Privacy Camp</ListLink>
-                    <ListLink to="/lightning-camp">Art Camp</ListLink>
-                  </ul>
-                </div>
-                <div class="col-md-3">
-                  <h2>Venue</h2>
-                  <ul>
-                    <ListLink to="/">Venue</ListLink>
-                    <ListLink to="/">Hotel</ListLink>
-                    <ListLink to="/">Parking</ListLink>
-                  </ul>
-                </div>
+      </div>
+      <footer id="footer-main">
+        <nav>
+          <div class="container">
+            <div class="row">
+              <div class="col-md-3">
+                <h2>TABConf</h2>
+                <ul>
+                  <ListLink to="/">Home</ListLink>
+                  <ListLink to="/">Speakers</ListLink>
+                  <ListLink to="/">Register</ListLink>
+                  <ListLink to="/">Contact Us</ListLink>
+                </ul>
+              </div>
+              <div class="col-md-3">
+                <h2>Camps</h2>
+                <ul>
+                  <ListLink to="/lightning-camp">Lightning Camp</ListLink>
+                  <ListLink to="/lightning-camp">Spice Camp</ListLink>
+                  <ListLink to="/lightning-camp">Dapp Camp</ListLink>
+                  <ListLink to="/lightning-camp">Privacy Camp</ListLink>
+                  <ListLink to="/lightning-camp">Art Camp</ListLink>
+                </ul>
+              </div>
+              <div class="col-md-3">
+                <h2>Venue</h2>
+                <ul>
+                  <ListLink to="/">Venue</ListLink>
+                  <ListLink to="/">Hotel</ListLink>
+                  <ListLink to="/">Parking</ListLink>
+                </ul>
               </div>
             </div>
-
-          </nav>
-          <div>
-            <p>&copy; {new Date().getFullYear()}, TabConf, LLC.</p>
           </div>
-        </footer>
-      </div>
+
+        </nav>
+        <div>
+          <p>&copy; {new Date().getFullYear()}, TabConf, LLC.</p>
+        </div>
+      </footer>
     </>
   )
 }

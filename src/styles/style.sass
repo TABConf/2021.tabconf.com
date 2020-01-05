@@ -1,5 +1,5 @@
-@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300i,600,600i&display=swap');
-@import url('https://fonts.googleapis.com/css?family=Fira+Mono:400,700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300i,600,600i&display=swap')
+@import url('https://fonts.googleapis.com/css?family=Fira+Mono:400,700&display=swap')
 
 
 $color-blue-dark: #004659
@@ -23,10 +23,17 @@ body, html
 #header-main
   background: $color-blue-dark
   display: flex
+  flex-direction: column
 
-  h1
-    flex-basis: 50%
-    max-width: 300px;
+  .navbar-brand
+    background-image: url('../svg/TABConf-2020-Logo_Color-Dark.svg')
+    background-size: contain
+    background-repeat: no-repeat
+    background-position: center center
+    text-indent: -999rem
+    width: 7rem
+    height: 0
+    padding-bottom: 12%
 
 #footer-main
   background: $color-blue-dark
