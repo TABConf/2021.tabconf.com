@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css?family=Fira+Mono:400,700&display=swap')
 
 
-$color-blue-dark: #004659
+$color-blue: #004659
 $color-green: #a6ffcf
 $color-orange: #fc4600
 $color-white: #fff
@@ -10,21 +10,51 @@ $color-white: #fff
 a
   color: $color-white
   text-decoration: underline
+  
   &:hover
     color: $color-white
     text-decoration: underline !important
+    
+  &.btn
+    text-decoration: none
+    
+    &:hover
+      text-decoration: none !important
+
+.btn
+  font-family: 'Fira Mono', 'Courier', sans-serif
 
 body, html
-    background: $color-blue-dark
+    background: $color-blue
     color: #fff
     font-family: 'Source Sans Pro', sans-serif
     font-weight: 300
+    margin: 0
+    padding: 0
+
+.camp
+  padding: 0 5vw 0
+  
+  .row
+    padding: 0 0 10vw
+    border-bottom: 1px solid $color-white
+    margin: 10vw 0
 
 #header-main
-  background: $color-blue-dark
+  background: $color-blue
   display: flex
   flex-direction: column
-
+  box-shadow: 0 10px 25px rgba(0,0,0,0.25)
+  
+  .navbar
+    &.bg-dark
+      background: $color-blue !important
+      a
+        color: $color-white
+  
+  .dropdown-menu
+    background-color: $color-blue
+    
   .navbar-brand
     background-image: url('../svg/TABConf-2020-Logo_Color-Dark.svg')
     background-size: contain
@@ -36,4 +66,11 @@ body, html
     padding-bottom: 12%
 
 #footer-main
-  background: $color-blue-dark
+  background: $color-blue
+  margin: 0
+  padding: 2vw
+  box-shadow: 0 -10px 25px rgba(0,0,0,0.25)
+
+p
+  &:last-child
+    margin-bottom: 0

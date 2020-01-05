@@ -37,7 +37,7 @@ const IndexPage = () => (
     <Button color="primary" size="lg">Register Now <FontAwesomeIcon icon="user-plus" /></Button>
     
     <Camp title="Lightning Camp" image="https://via.placeholder.com/150" link="/lightning-camp">
-      Deploy engineer deliver, share out-of-the-box social applications compelling
+      <p>Deploy engineer deliver, share out-of-the-box social applications compelling
 tagclouds methodologies, "sticky engineer reinvent, syndicate vertical dot-com,
 utilize maximize markets disintermediate frictionless blogging." Reinvent
 optimize webservices dynamic, 24/365 streamline tagclouds, e-business
@@ -45,11 +45,11 @@ revolutionary?" Deploy mindshare sticky harness generate global, granular killer
 front-end disintermediate user-centred: open-source dynamic ROI podcasts.
 Reinvent networking implement A-list systems seamless web services; value-added
 interfaces solutions; embedded blogging. Feeds embedded transparent impactful
-social monetize rss-capable schemas.
+social monetize rss-capable schemas.</p>
     </Camp>
 
     <Camp title="Spice Camp" image="https://via.placeholder.com/150" link="/spice-camp">
-      Deploy engineer deliver, share out-of-the-box social applications compelling
+      <p>Deploy engineer deliver, share out-of-the-box social applications compelling
 tagclouds methodologies, "sticky engineer reinvent, syndicate vertical dot-com,
 utilize maximize markets disintermediate frictionless blogging." Reinvent
 optimize webservices dynamic, 24/365 streamline tagclouds, e-business
@@ -57,11 +57,11 @@ revolutionary?" Deploy mindshare sticky harness generate global, granular killer
 front-end disintermediate user-centred: open-source dynamic ROI podcasts.
 Reinvent networking implement A-list systems seamless web services; value-added
 interfaces solutions; embedded blogging. Feeds embedded transparent impactful
-social monetize rss-capable schemas.
+social monetize rss-capable schemas.</p>
     </Camp>
 
     <Camp title="Dapp Camp" image="https://via.placeholder.com/150" link="/dapp-camp">
-      Deploy engineer deliver, share out-of-the-box social applications compelling
+      <p>Deploy engineer deliver, share out-of-the-box social applications compelling
 tagclouds methodologies, "sticky engineer reinvent, syndicate vertical dot-com,
 utilize maximize markets disintermediate frictionless blogging." Reinvent
 optimize webservices dynamic, 24/365 streamline tagclouds, e-business
@@ -69,11 +69,11 @@ revolutionary?" Deploy mindshare sticky harness generate global, granular killer
 front-end disintermediate user-centred: open-source dynamic ROI podcasts.
 Reinvent networking implement A-list systems seamless web services; value-added
 interfaces solutions; embedded blogging. Feeds embedded transparent impactful
-social monetize rss-capable schemas.
+social monetize rss-capable schemas.</p>
     </Camp>
 
     <Camp title="Privacy Camp" image="https://via.placeholder.com/150" link="/privacy-camp">
-      Deploy engineer deliver, share out-of-the-box social applications compelling
+      <p>Deploy engineer deliver, share out-of-the-box social applications compelling
 tagclouds methodologies, "sticky engineer reinvent, syndicate vertical dot-com,
 utilize maximize markets disintermediate frictionless blogging." Reinvent
 optimize webservices dynamic, 24/365 streamline tagclouds, e-business
@@ -81,11 +81,11 @@ revolutionary?" Deploy mindshare sticky harness generate global, granular killer
 front-end disintermediate user-centred: open-source dynamic ROI podcasts.
 Reinvent networking implement A-list systems seamless web services; value-added
 interfaces solutions; embedded blogging. Feeds embedded transparent impactful
-social monetize rss-capable schemas.
+social monetize rss-capable schemas.</p>
     </Camp>
 
     <Camp title="Art Camp" image="https://via.placeholder.com/150" link="/art-camp">
-      Deploy engineer deliver, share out-of-the-box social applications compelling
+      <p>Deploy engineer deliver, share out-of-the-box social applications compelling
 tagclouds methodologies, "sticky engineer reinvent, syndicate vertical dot-com,
 utilize maximize markets disintermediate frictionless blogging." Reinvent
 optimize webservices dynamic, 24/365 streamline tagclouds, e-business
@@ -93,7 +93,7 @@ revolutionary?" Deploy mindshare sticky harness generate global, granular killer
 front-end disintermediate user-centred: open-source dynamic ROI podcasts.
 Reinvent networking implement A-list systems seamless web services; value-added
 interfaces solutions; embedded blogging. Feeds embedded transparent impactful
-social monetize rss-capable schemas.
+social monetize rss-capable schemas.</p>
     </Camp>
   </Layout>
 )

@@ -1,35 +1,66 @@
-import { Link } from "gatsby"
+import React, { useState } from 'react'
 import PropTypes from "prop-types"
-import React from "react"
+import {
+  Collapse,
+  Navbar,
+  NavbarToggler,
+  NavbarBrand,
+  Nav,
+  NavItem,
+  NavLink,
+  UncontrolledDropdown,
+  DropdownToggle,
+  DropdownMenu,
+  DropdownItem,
+  NavbarText
+} from 'reactstrap'
 
-import ListLink from "./listlink"
+const Header = ({siteTitle}) => {
+  const [isOpen, setIsOpen] = useState(false)
 
-const Header = ({ siteTitle }) => (
-  <header id="header-main">
-    
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark" role="navigation">
-      <a href="/" class="navbar-brand">
-        TABConf 2020
-      </a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
-        <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-          <ListLink to="/">Home</ListLink>
-          <li class="nav-item dropdown">
-            <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Camps</a>
-            <div class="dropdown-menu">
-              <a href="/lightning-camp" class="dropdown-item">Lightning Camp</a>
-            </div>
-          </li>
-          <ListLink to="/speakers">Speakers</ListLink>
-          <ListLink to="/venue">Venue</ListLink>
-        </ul>
-      </div>
-    </nav>
-  </header>
-)
+  const toggle = () => setIsOpen(!isOpen)
+
+  return (
+    <header id="header-main">
+      <Navbar color="dark" dark expand="lg">
+        <NavbarBrand href="/">{siteTitle}</NavbarBrand>
+        <NavbarToggler onClick={toggle} />
+        <Collapse isOpen={isOpen} navbar>
+          <Nav className="mr-auto" navbar>
+            <NavItem>
+              <NavLink href="/" active="1">Home</NavLink>
+            </NavItem>
+            <NavItem>
+              <NavLink href="/">Register</NavLink>
+            </NavItem>
+            <UncontrolledDropdown nav inNavbar>
+              <DropdownToggle nav caret>
+                Camps
+              </DropdownToggle>
+              <DropdownMenu right>
+                <NavItem>
+                  <NavLink href="/lightning-camp">Lightning Camp</NavLink>
+                </NavItem>
+                <NavItem>
+                  <NavLink href="/lightning-camp">Spice Camp</NavLink>
+                </NavItem>
+                <NavItem>
+                  <NavLink href="/lightning-camp">Dapp Camp</NavLink>
+                </NavItem>
+              </DropdownMenu>
+            </UncontrolledDropdown>
+            <NavItem>
+              <NavLink href="/">Speakers</NavLink>
+            </NavItem>
+            <NavItem>
+              <NavLink href="/venue">Venue</NavLink>
+            </NavItem>
+          </Nav>
+        </Collapse>
+      </Navbar>
+    </header>
+  )
+}
 
 Header.propTypes = {
   siteTitle: PropTypes.string,
