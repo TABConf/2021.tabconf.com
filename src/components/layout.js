@@ -14,6 +14,7 @@ import { useStaticQuery, Link, graphql } from "gatsby"
 import Footer from "./footer"
 import Header from "./header"
 
+
 import "../styles/style.sass"
 
 const Layout = ({ children }) => {
@@ -30,7 +31,7 @@ const Layout = ({ children }) => {
   return (
     <>
       <Header siteTitle={data.site.siteMetadata.title} />
-      <div class="container-fluid">
+      <div class="container-fluid main-container container">
         <main>{children}</main>
       </div>
       <Footer />
