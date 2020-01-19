@@ -1,11 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300i,600,600i&display=swap')
 @import url('https://fonts.googleapis.com/css?family=Fira+Mono:400,700&display=swap')
-
-
-$color-blue: #004659
-$color-green: #40FF98
-$color-orange: #fc4600
-$color-white: #fff
+@import 'inc/variables'
 
 a
   color: $color-white
@@ -23,6 +18,16 @@ a
 
 .btn
   font-family: 'Fira Mono', 'Courier', sans-serif
+  margin: auto
+  display: block
+  &.btn-primary
+    background-color: $primary
+    border-color: $primary
+    border-radius: 0
+    text-transform: lowercase
+    &:hover
+      background-color: lighten($primary, 10%)
+      border-color: lighten($primary, 10%)
 
 body, html
     background: $color-blue
@@ -33,34 +38,160 @@ body, html
     padding: 0
 
 .camp
-  padding: 0 5vw 0
-  
+  border-bottom: 1px solid fade-out($color-white, 0.75)
+  padding: 10vw 0 8vw
+  &.art
+    .camp-image
+      div
+        background-color: $color-art
+  &.dapp
+    .camp-image
+      div
+        background-color: $color-dapp
+  &.lightning
+    .camp-image
+      div
+        background-color: $color-lightning
+  &.privacy
+    .camp-image
+      div
+        background-color: $color-privacy
+  &.spice
+    .camp-image
+      div
+        background-color: $color-spice
+  .camp-image
+    padding: 1rem 1rem 0
+    div
+      background-color: $color-lightning
+      background-blend-mode: luminosity
+      background-size: cover
+      width: 80vw
+      height: 60vw
+      clip-path: $path-1
+    img
+      mix-blend-mode: luminosity
   .row
-    padding: 0 0 10vw
-    border-bottom: 1px solid $color-white
-    margin: 10vw 0
+    padding: 0 5vw
+    margin: 0
+    
+  @media #{$md}
+    padding: 0
+    
+    .row
+      padding: 0
+    
+    *[class*="col"]:first-child
+      padding: 15vw 2.5vw
+    
+    .camp-image
+      padding: 0
+      
+      div
+        padding: 0
+        clip-path: none
+        height: 100%
+
+.camp-icon
+  font-family: $font-code
+  text-transform: lowercase
+  font-weight: 400
+  font-size: 6.4vw
+  padding: 1rem
+  text-align: center
+  
+  &.lightning
+    *[class*="fa-"]
+      background: $color-lightning
+      
+  &.spice
+    *[class*="fa-"]
+      background: $color-spice
+      
+  &.dapp
+    *[class*="fa-"]
+      background: $color-dapp
+      
+  &.privacy
+    *[class*="fa-"]
+      background: $color-privacy
+      
+  &.art
+    *[class*="fa-"]
+      background: $color-art
+      
+  *[class*="fa-"]
+    // background: $primary
+    // padding: 3rem
+    // border-radius: 7.5rem
+    // width: 10rem
+    // height: 10rem
+    // box-shadow: 5px 5px 10px rgba(0,0,0,0.25)
+    // display: block
+    // margin: 0 auto 1rem
+    background: $primary
+    padding: 13vw
+    border-radius: 32vw
+    width: 42vw
+    height: 42vw
+    box-shadow: 5px 5px 10px rgba(0,0,0,0.25)
+    display: block
+    margin: 0 auto 4vw
+    
+  a
+    text-decoration: none
+    display: block
+    
+    &:hover
+      text-decoration: none !important
+      
+  em
+    font-weight: 700
+  
+  @media #{$md}
+    font-size: 2.5vw
+    
+    *[class*="fa-"]
+      width: 12vw;
+      height: 12vw
+      padding: 3.5vw
+      border-radius: 6vw
 
 .camp-list
   text-align: center
+  
   img
     margin: auto
     width: 50%
+  
+  @media #{$md}
+    margin-bottom: 5vw
+
+.container
+  max-width: none
 
 #footer-main
   background: $color-blue
   margin: 0
-  padding: 2vw
+  padding: 4vw
   box-shadow: 0 -10px 25px rgba(0,0,0,0.25)
+  *[class*="col"]
+    margin: 4vw 0
   
 #header-main
-  background: $color-blue
   display: flex
   flex-direction: column
-  box-shadow: 0 10px 25px rgba(0,0,0,0.25)
+  position: fixed
+  z-index: 99
+  background: linear-gradient(to bottom, fade-out($color-blue, 0.15), fade-out($color-blue, 1.0))
+  height: 20vw
+  width: 100%
   
   .navbar
+    padding: 0
+    
     &.bg-dark
-      background: $color-blue !important
+      background: rgba(0,0,0,0) !important
       a
         color: $color-white
   
@@ -68,14 +199,61 @@ body, html
     background-color: $color-blue
     
   .navbar-brand
-    background-image: url('../svg/TABConf-2020-Logo_Color-Dark.svg')
+    background-image: url('../svg/tab-logo-nav.svg')
     background-size: contain
     background-repeat: no-repeat
     background-position: center center
     text-indent: -999rem
-    width: 7rem
-    height: 0
-    padding-bottom: 12%
+    width: 74vw
+    // height: 100%
+    padding-bottom: 60%
+    position: fixed
+    top: -23vw
+    left: -7vw
+    z-index: 99
+
+  .navbar-toggler
+    background-image: url('../svg/nav-toggler.svg')
+    background-size: cover
+    width: 70vw
+    height: 50vw
+    border: 0
+    position: fixed
+    right: -30vw
+    top: -50px
+    z-index: 99
+    
+    .navbar-toggler-icon
+      display: none
+      
+  .navbar-collapse
+    padding: 31vw 10vw 10vw
+    width: 100%
+    height: 100%
+    background-color: fade-out($color-blue, 0.1)
+    box-shadow: 0 10px 10px rgba(0,0,0,0.25)
+    height: auto !important
+    position: inherit !important
+    z-index: 98
+    transform: translateY(0%)
+    transition: transform 0.15s ease-out
+    
+    &.collapse:not(.show)
+      display: initial
+      transform: translateY(-100%)
+      transition: transform 0.15s ease-out
+  
+  @media #{$md}
+    .navbar-brand
+      width: 45vw
+      left: -4vw
+      top: -28vw
+      
+    .navbar-toggler
+      width: 30vw
+      right: -12vw
+      top: -5vw
+      height: 21vw
 
 .hero
   background-image: url('../images/tabconf-network.png')
@@ -84,14 +262,22 @@ body, html
   background-position: center
   padding: 0
   min-height: 50vh
-  padding: 1rem
+  padding: 30vw 1rem 1rem
   
   .subtitle
     font-size: 1.5rem
+  
+  @media #{$md}
+    padding-top: 15vw
 
 img
   display: block
   width: 100%
+  &.clip
+    clip-path: $path-1
+    &.path-2
+      clip-path: $path-2
+    
 
 .intro
   background: $color-blue
@@ -102,6 +288,12 @@ img
   h2
     color: $color-green
     font-size: 1.5rem
+  
+  @media #{$md}
+    padding: 2.5vw
+    
+    #intro-image
+      transform: translateY(-35%)
 
 .main-container
   padding: 0

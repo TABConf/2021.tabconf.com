@@ -5,14 +5,18 @@ import Layout from "../components/layout"
 import Image from "../components/image"
 import SEO from "../components/seo"
 import Camp from "../components/camp"
+import CampIcon from "../components/campicon"
 import Logo from "../svg/TABConf-2020-Logo_Color-Dark.svg"
 import { Button, Container, Row, Col } from 'reactstrap'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { library } from '@fortawesome/fontawesome-svg-core'
-import { faCheckSquare, faCoffee, faUserPlus, faMapMarker, faCalendar } from '@fortawesome/free-solid-svg-icons'
+import { faCheckSquare, faCoffee, faUserPlus, faMapMarker, faCalendar, faBolt } from '@fortawesome/free-solid-svg-icons'
 
-library.add(faCheckSquare, faCoffee, faUserPlus, faMapMarker, faCalendar)
+import EventImage from "../images/people-placeholder.jpg"
+
+library.add(faCheckSquare, faCoffee, faUserPlus, faMapMarker, faCalendar, faBolt)
+
 
 
 const IndexPage = () => (
@@ -51,32 +55,28 @@ const IndexPage = () => (
           badge from every camp for a chance at winning the final prize.</p>
         </Col>
         <Col md="6">
-          <img src="https://via.placeholder.com/300" alt="Image" />
+          <img src={EventImage} alt="Image" class="clip path-2" id="intro-image" />
         </Col>
       </Row>
       <Row className="camp-list">
-        <Col md="1"></Col>
-        <Col md="2">
-          <img src="https://via.placeholder.com/150" alt="Image" />
-          LightningCamp
+        <Col lg="1"></Col>
+        <Col md="4" lg="2">
+          <CampIcon link="/lightning-camp" slug="lightning" icon="bolt">Lightning</CampIcon>
         </Col>
-        <Col md="2">
-          <img src="https://via.placeholder.com/150" alt="Image" />
-          SpiceCamp
+        <Col md="4" lg="2">
+          <CampIcon link="/spice-camp" slug="spice" icon="pepper-hot">Spice</CampIcon>
         </Col>
-        <Col md="2">
-          <img src="https://via.placeholder.com/150" alt="Image" />
-          DappCamp
+        <Col md="4" lg="2">
+          <CampIcon link="/dapp-camp" slug="dapp" icon="cog">Dapp</CampIcon>
         </Col>
-        <Col md="2">
-          <img src="https://via.placeholder.com/150" alt="Image" />
-          PrivacyCamp
+        <Col md="2" lg="1"></Col>
+        <Col md="4" lg="2">
+          <CampIcon link="/privacy-camp" slug="privacy" icon="lock">Privacy</CampIcon>
         </Col>
-        <Col md="2">
-          <img src="https://via.placeholder.com/150" alt="Image" />
-          ArtCamp
+        <Col md="4" lg="2">
+          <CampIcon link="/art-camp" slug="art" icon="palette">Art</CampIcon>
         </Col>
-        <Col md="1"></Col>
+        <Col md="2" lg="1"></Col>
       </Row>
       <Row>
         <Col>
@@ -85,7 +85,7 @@ const IndexPage = () => (
       </Row>
     </Container>
     
-    <Camp title="Lightning Camp" image="https://via.placeholder.com/150" link="/lightning-camp">
+    <Camp title="Lightning" slug="lightning" image="people-placeholder.jpg" icon="bolt" link="/lightning-camp">
       <p>Deploy engineer deliver, share out-of-the-box social applications compelling
 tagclouds methodologies, "sticky engineer reinvent, syndicate vertical dot-com,
 utilize maximize markets disintermediate frictionless blogging." Reinvent
@@ -97,7 +97,7 @@ interfaces solutions; embedded blogging. Feeds embedded transparent impactful
 social monetize rss-capable schemas.</p>
     </Camp>
 
-    <Camp title="Spice Camp" image="https://via.placeholder.com/150" link="/spice-camp">
+    <Camp title="Spice" slug="spice" image="https://via.placeholder.com/150" icon="pepper-hot" link="/spice-camp">
       <p>Deploy engineer deliver, share out-of-the-box social applications compelling
 tagclouds methodologies, "sticky engineer reinvent, syndicate vertical dot-com,
 utilize maximize markets disintermediate frictionless blogging." Reinvent
@@ -109,7 +109,7 @@ interfaces solutions; embedded blogging. Feeds embedded transparent impactful
 social monetize rss-capable schemas.</p>
     </Camp>
 
-    <Camp title="Dapp Camp" image="https://via.placeholder.com/150" link="/dapp-camp">
+    <Camp title="Dapp" slug="dapp" image="https://via.placeholder.com/150" icon="lock" link="/dapp-camp">
       <p>Deploy engineer deliver, share out-of-the-box social applications compelling
 tagclouds methodologies, "sticky engineer reinvent, syndicate vertical dot-com,
 utilize maximize markets disintermediate frictionless blogging." Reinvent
@@ -121,7 +121,7 @@ interfaces solutions; embedded blogging. Feeds embedded transparent impactful
 social monetize rss-capable schemas.</p>
     </Camp>
 
-    <Camp title="Privacy Camp" image="https://via.placeholder.com/150" link="/privacy-camp">
+    <Camp title="Privacy" slug="privacy" image="https://via.placeholder.com/150" icon="lock" link="/privacy-camp">
       <p>Deploy engineer deliver, share out-of-the-box social applications compelling
 tagclouds methodologies, "sticky engineer reinvent, syndicate vertical dot-com,
 utilize maximize markets disintermediate frictionless blogging." Reinvent
@@ -133,7 +133,7 @@ interfaces solutions; embedded blogging. Feeds embedded transparent impactful
 social monetize rss-capable schemas.</p>
     </Camp>
 
-    <Camp title="Art Camp" image="https://via.placeholder.com/150" link="/art-camp">
+    <Camp title="Art" slug="art" image="https://via.placeholder.com/150" icon="palette" link="/art-camp">
       <p>Deploy engineer deliver, share out-of-the-box social applications compelling
 tagclouds methodologies, "sticky engineer reinvent, syndicate vertical dot-com,
 utilize maximize markets disintermediate frictionless blogging." Reinvent

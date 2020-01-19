@@ -22,10 +22,10 @@ const Header = ({siteTitle}) => {
 
   return (
     <header id="header-main">
-      <Navbar color="dark" dark expand="lg">
+      <Navbar color="dark" dark fixed expand="lg">
         <NavbarBrand href="/">{siteTitle}</NavbarBrand>
         <NavbarToggler onClick={toggle} />
-        <Collapse isOpen={isOpen} navbar>
+        <Collapse isOpen={isOpen} navbar className="no-transition">
           <Nav className="mr-auto" navbar>
             <NavItem>
               <NavLink href="/" active="1">Home</NavLink>
