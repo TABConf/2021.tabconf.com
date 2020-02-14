@@ -159,10 +159,11 @@ body, html
     font-size: 2.5vw
 
     *[class*="fa-"]
-      width: 12vw;
+      width: 12vw
       height: 12vw
       padding: 3.5vw
       border-radius: 6vw
+      font-size: 5vw
 
 .camp-list
   text-align: center
@@ -183,7 +184,8 @@ body, html
   padding: 4vw
   box-shadow: 0 -10px 25px rgba(0,0,0,0.25)
   *[class*="col"]
-    margin: 4vw 0
+    margin-top: 4vw
+    margin-bottom: 4vw
 
 #header-main
   display: flex
@@ -247,7 +249,7 @@ body, html
     // transition: top 0.15s ease-out
     transform: translateY(0%)
     transition: transform 0.15s ease-out
-    pointer-events: all
+    // pointer-events: all
 
     &.collapse:not(.show)
       display: initial
@@ -256,7 +258,15 @@ body, html
       position: absolute
       // top: -100%
       // transition: top 0.15s ease-out
-      pointer-events: none
+      // pointer-events: none
+      
+      .navbar-brand
+        transform: translateY(100%)
+        transition: transform 0.15s ease-out
+      
+    .navbar-brand
+      transform: translateY(-8.5%)
+      transition: transform 0.15s ease-out
 
   @media #{$md}
     .navbar-brand
@@ -277,18 +287,18 @@ body, html
   background-position: center
   padding: 0
   min-height: 50vh
-  // padding: 30vw 1rem 1rem
+  padding-bottom: 20vw !important
 
   .subtitle
     font-size: 1.5rem
 
   @media #{$md}
     padding-top: 15vw
+    padding-bottom: 20vw !important
 
 .home
   .navbar-brand
-    position: absolute !important
-    left: -999rem !important
+    transform: translateY(0%) !important
 
 img
   display: block
@@ -301,6 +311,9 @@ img
 .intro
   background: $color-blue
   box-shadow: 0 10px 25px rgba(0,0,0,0.25)
+  padding-top: 5vw
+  padding-bottom: 5vw
+  
   *[class^='col']
     padding: 1rem
 
