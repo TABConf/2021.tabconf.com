@@ -1,7 +1,7 @@
 body.default {
   .default-content {
     padding-top: 5vw;
-    padding-bottom: 5vw;
+    padding-bottom: 10vw;
 
     > .row {
       padding: 0 5vw;
@@ -28,6 +28,7 @@ body.default {
     padding-bottom: 0;
     position: relative;
     text-shadow: 2px 2px 5px rgba(0,0,0,.75);
+    overflow: hidden;
 
     .bg {
       background-image: url('../images/tabconf-network.png');

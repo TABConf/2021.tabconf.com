@@ -43,5 +43,8 @@
 		"jshint-stylish": "2.2.1",
 		"lazypipe": "1.0.1",
 		"node-sass": "4.13.0"
+	},
+	"dependencies": {
+		"gulp-image": "^6.0.0"
 	}
 }

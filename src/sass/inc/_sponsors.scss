@@ -1,10 +1,31 @@
 body.sponsors {
 
+  .default-header {
+    .bg {
+      background-image: url('../images/sponsor-hall.jpg');
+      filter: blur(3px);
+    }
+  }
+
+  .default-footer {
+    background-image: url('../images/sponsor-hall-02.jpg');
+  }
+
+  h2, h3 {
+    font-weight: bold;
+  }
+
   .sponsors {
 
     border-bottom: 1px solid $color-blue-dark;
     margin-bottom: 10vw;
     padding-bottom: 5vw;
+
+    &:last-of-type {
+      margin-bottom: 0;
+      border: 0;
+      padding-bottom: 0;
+    }
 
     *[class*="col-"] {
       margin-bottom: 5vw;
