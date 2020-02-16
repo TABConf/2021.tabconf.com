@@ -47,13 +47,9 @@ var paths = {
 		output: 'dist/'
 	},
 	reload: './dist/',
-  html: {
-      input: 'src/html/**/*',
-      output: 'dist/'
-  },
-	images: {
-	    input: 'src/images/**/*',
-	    output: 'dist/images/'
+	html: {
+		input: 'src/html/**/*',
+		output: 'dist/'
 	}
 };
 
