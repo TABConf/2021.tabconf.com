@@ -1,0 +1,281 @@
+a
+  color: $color-white
+  text-decoration: underline
+
+  &:hover
+    color: $color-white
+    text-decoration: underline !important
+
+  &.btn
+    text-decoration: none
+
+    &:hover
+      text-decoration: none !important
+
+.btn
+  font-family: 'Fira Mono', 'Courier', sans-serif
+  margin: 5vw auto
+  display: block
+
+  &.btn-primary
+    background-color: $primary
+    border-color: $primary
+    border-radius: 0
+    text-transform: lowercase
+
+    &:hover
+      background-color: lighten($primary, 10%)
+      border-color: lighten($primary, 10%)
+
+  @media #{$md_up}
+    margin: 0
+    display: inline-block
+
+
+body
+  background: $color-blue
+  margin: 0
+  padding: 0
+
+  &:not(.home)
+    .navbar
+      .navbar-collapse
+        .navbar-brand
+          display: none
+
+
+
+
+
+.camp
+  border-bottom: 1px solid fade-out($color-white, 0.75)
+  padding: 10vw 0 8vw
+  &.art
+    .camp-image
+      div
+        background-color: $color-art
+  &.dapp
+    .camp-image
+      div
+        background-color: $color-dapp
+  &.lightning
+    .camp-image
+      div
+        background-color: $color-lightning
+  &.privacy
+    .camp-image
+      div
+        background-color: $color-privacy
+  &.spice
+    .camp-image
+      div
+        background-color: $color-spice
+  .camp-image
+    padding: 1rem 1rem 0
+    div
+      background-color: $color-lightning
+      background-blend-mode: luminosity
+      background-size: cover
+      width: 80vw
+      height: 60vw
+      clip-path: $path-1
+    img
+      mix-blend-mode: luminosity
+  .row
+    padding: 0 5vw
+    margin: 0
+
+  @media #{$md_up}
+    padding: 0
+
+    .row
+      padding: 0
+
+    *[class*="col"]:first-child
+      padding: 15vw 2.5vw
+
+    .camp-image
+      padding: 0
+
+      div
+        padding: 0
+        clip-path: none
+        height: 100%
+        width: 100%
+
+.camp-icon
+  font-family: $font-code
+  text-transform: lowercase
+  font-weight: 400
+  font-size: 6.4vw
+  padding: 1rem
+  text-align: center
+
+  &.lightning
+    *[class*="fa-"]
+      background: $color-lightning
+
+  &.spice
+    *[class*="fa-"]
+      background: $color-spice
+
+  &.dapp
+    *[class*="fa-"]
+      background: $color-dapp
+
+  &.privacy
+    *[class*="fa-"]
+      background: $color-privacy
+
+  &.art
+    *[class*="fa-"]
+      background: $color-art
+
+  *[class*="fa-"]
+    // background: $primary
+    // padding: 3rem
+    // border-radius: 7.5rem
+    // width: 10rem
+    // height: 10rem
+    // box-shadow: 5px 5px 10px rgba(0,0,0,0.25)
+    // display: block
+    // margin: 0 auto 1rem
+    background: $primary
+    padding: 13vw
+    border-radius: 32vw
+    width: 42vw
+    height: 42vw
+    box-shadow: 5px 5px 10px rgba(0,0,0,0.25)
+    display: block
+    margin: 0 auto 4vw
+    font-size: 15vw
+
+  a
+    text-decoration: none
+    display: block
+
+    &:hover
+      text-decoration: none !important
+
+  em
+    font-weight: 700
+
+  @media #{$md_up}
+    font-size: 2.5vw
+
+    *[class*="fa-"]
+      width: 12vw
+      height: 12vw
+      padding: 3.5vw
+      border-radius: 6vw
+      font-size: 5vw
+
+.camp-list
+  text-align: center
+
+  img
+    margin: auto
+    width: 50%
+
+  @media #{$md_up}
+    margin-bottom: 5vw
+
+.container
+  //max-width: none
+
+.hero
+  background-image: url('../images/tabconf-network.png')
+  background-size: cover
+  background-repeat: no-repeat
+  background-position: center
+  padding: 0
+  min-height: 50vh
+  padding-bottom: 20vw !important
+
+  .subtitle
+    font-size: 1.5rem
+
+  @media #{$md_up}
+    padding-top: 15vw
+    padding-bottom: 20vw !important
+
+  @media #{$lg_up}
+    padding-left: 5vw
+    padding-right: 5vw
+
+
+img
+  display: block
+  width: 100%
+  &.clip
+    clip-path: $path-1
+    &.path-2
+      clip-path: $path-2
+
+.intro
+  background: $color-blue
+  box-shadow: 0 10px 25px rgba(0,0,0,0.25)
+  padding-top: 5vw
+  padding-bottom: 5vw
+
+  *[class^='col']
+    padding: 1rem
+
+  h2
+    color: $color-green
+    font-size: 1.5rem
+
+  @media #{$md_up}
+    padding: 2.5vw
+
+    #intro-image
+      transform: translateY(-35%)
+
+//.wrapper
+//  .container, .container-fluid
+//    &:first-of-type
+//      padding: 35vw 1rem 1rem
+//
+//  @media #{$md_up}
+//    .container, .container-fluid
+//      &:first-of-type
+//        padding: 20vw 1rem 1rem
+//
+//  @media #{$lg_up}
+//    .container, .container-fluid
+//      &:first-of-type
+//        @include calcVW(padding-top, 150px, $lg)
+//
+//  @media #{$xl_up}
+//    .container, .container-fluid
+//      &:first-of-type
+//        @include calcVW(padding-top, 150px, $xl)
+//
+//  @media #{$xx_up}
+//    .container, .container-fluid
+//      &:first-of-type
+//        @include calcVW(padding-top, 175px, $xx)
+
+.main-container
+  padding: 0
+
+.metadata
+  margin: 0 1rem 0 0
+  display: flex
+  align-items: center
+
+  *[class*="fa-"]
+    background-color: $color-green
+    color: $color-blue
+    margin-right: 0.5rem
+    padding: 0.5rem
+    width: 2rem
+    height: 2rem
+    border-radius: 1rem
+
+.metadata-group
+  display: flex
+
+p
+  &:last-child
+    margin-bottom: 0

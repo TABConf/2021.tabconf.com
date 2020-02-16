@@ -1,0 +1,116 @@
+body.default {
+  .default-content {
+    padding-top: 5vw;
+    padding-bottom: 5vw;
+
+    > .row {
+      padding: 0 5vw;
+    }
+  }
+
+  .default-footer {
+    background-color: $color-blue;
+    background-image: url('../images/tabconf-network.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding-left: 0;
+    padding-right: 0;
+    padding-bottom: 40vw;
+    padding-top: 0;
+  }
+
+  .default-header {
+    padding: 35vw 1rem 1rem;
+    background-color: $color-blue-dark;
+    padding-left: 0;
+    padding-right: 0;
+    padding-bottom: 0;
+    position: relative;
+    text-shadow: 2px 2px 5px rgba(0,0,0,.75);
+
+    .bg {
+      background-image: url('../images/tabconf-network.png');
+      background-repeat: no-repeat;
+      background-color: $color-blue;
+      background-blend-mode: luminosity;
+      background-position: center;
+      background-size: cover;
+      position: absolute;
+      opacity: 0.5;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+
+      .overlay {
+        background-color: $color-blue;
+        background-blend-mode: luminosity;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0.75;
+        display: none;
+      }
+    }
+
+    .row {
+      padding: 5vw;
+      position: relative;
+    }
+
+    .subtitle {
+      color: $color-green;
+    }
+  }
+
+  @media #{$md_up} {
+    .default-content {
+      img {
+        &.featured {
+          transform: translate(-20%, -85%);
+          width: 200%;
+        }
+      }
+    }
+
+    .default-header {
+      padding: 20vw 0 0;
+    }
+  }
+
+  @media #{$lg_up} {
+    .default-content {
+      img {
+        &.featured {
+          transform: translate(0%, -65%);
+          width: 100%;
+        }
+      }
+    }
+
+    .default-header {
+      @include calcVW(padding-top, 150px, $lg);
+    }
+  }
+  @media #{$xl_up} {
+    .default-header {
+      @include calcVW(padding-top, 150px, $xl);
+    }
+  }
+  @media #{$xx_up} {
+    .default-content {
+      img {
+        &.featured {
+          transform: translate(0%, -50%);
+        }
+      }
+    }
+
+    .default-header {
+      @include calcVW(padding-top, 175px, $xx);
+    }
+  }
+}

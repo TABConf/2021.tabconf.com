@@ -1,0 +1,26 @@
+body.sponsors {
+
+  .sponsors {
+
+    border-bottom: 1px solid $color-blue-dark;
+    margin-bottom: 10vw;
+    padding-bottom: 5vw;
+
+    *[class*="col-"] {
+      margin-bottom: 5vw;
+      margin-top: 5vw;
+    }
+
+    img {
+      margin-bottom: 5vw;
+    }
+  }
+
+  @media #{$xx_up} {
+    .byzantine {
+      img {
+        max-width: 50%;
+      }
+    }
+  }
+}

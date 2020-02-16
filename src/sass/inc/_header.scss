@@ -1,0 +1,226 @@
+#header-main {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  z-index: 99;
+  background: linear-gradient(to bottom, fade-out($color-blue, 0.15), fade-out($color-blue, 1.0));
+  height: 20vw;
+  width: 100%;
+
+  .navbar {
+    padding: 0;
+
+    &.bg-dark {
+      background: rgba(0, 0, 0, 0) !important;
+
+      a {
+        color: $color-white;
+      }
+    }
+
+    .dropdown-menu {
+      background-color: $color-blue;
+    }
+  }
+
+  .navbar-brand {
+    text-indent: -999rem;
+    width: 65vw;
+    padding-bottom: 24%;
+    position: fixed;
+    height: 0;
+    top: 0;
+    left: 0;
+    z-index: 99;
+
+    .navbar-brand-bg, .navbar-brand-shadow {
+      background-image: url('../svg/tab-logo-nav.svg');
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: top left;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+    }
+
+    .navbar-brand-shadow {
+      filter: brightness(0%) blur(1vw);
+      transform: scale(1 1.2);
+      opacity: 0.25;
+    }
+  }
+
+  .nav-link {
+    font-size: 7vw;
+  }
+
+  .navbar-toggler {
+    width: 32vw;
+    height: 25vw;
+    border: 0;
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 99;
+    padding: 0;
+
+    .navbar-toggler-bg, .navbar-toggler-shadow {
+      background-image: url(../svg/nav-toggler.svg);
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: top right;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      right: 0;
+    }
+
+    .navbar-toggler-icon {
+      display: none;
+    }
+
+    .navbar-toggler-shadow {
+      filter: brightness(0%) blur(1vw);
+      transform: scale(1 1.2);
+      opacity: 0.25;
+    }
+  }
+
+  .navbar-collapse {
+    padding: 31vw 10vw 10vw;
+    width: 100%;
+    height: 100%;
+    background-color: fade-out($color-blue, 0.1);
+    box-shadow: 0 10px 10px rgba(0,0,0,0.25);
+    height: auto !important;
+    z-index: 98;
+    position: relative;
+    top: 0%;
+    transform: translateY(0%);
+    transition: transform 0.15s ease-out;
+
+    &.show {
+      + .navbar-overlay {
+        opacity: 1;
+        transition: opacity 0.1s;
+        pointer-events: all;
+      }
+    }
+
+    &:not(.show) {
+      display: initial;
+      transform: translateY(-100%);
+      transition: transform 0.15s ease-out;
+      position: absolute;
+      box-shadow: none;
+    }
+  }
+
+  .navbar-overlay {
+    position: fixed;
+    background: fade-out(darken($color-blue, 50%), 0.25);
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 3;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.1s;
+  }
+
+  @media #{$md_up} {
+    .navbar-brand {
+      @include calcVW(width, 300px, $md);
+      padding-bottom: 15%;
+    }
+
+    .navbar-collapse {
+      padding-top: 20vw;
+    }
+
+    .navbar-toggler {
+      width: 16vw;
+      height: 12.5vw;
+    }
+  }
+
+  @media #{$lg_up} {
+    height: 0;
+
+    .navbar-brand {
+      @include calcVW(width, 300px, $lg);
+      padding-bottom: 10%;
+    }
+
+
+
+    .navbar-collapse {
+      padding: 0;
+
+      &:not(.show) {
+        transform: none;
+        background: none;
+      }
+    }
+
+    .nav-link {
+      @include calcFontVW(18, 992);
+    }
+
+    .navbar-nav {
+      padding: 2vw 3vw 4vw 7vw;
+      z-index: 1;
+      position: relative;
+    }
+
+    .navbar-overlay {
+      display: none;
+    }
+
+    .navbar-shadow-container {
+      position: absolute;
+      top: 0;
+      right: 0;
+
+      .navbar-bg, .navbar-shadow {
+        background-image: url('../svg/header-bg.svg');
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+      }
+
+      .navbar-shadow {
+        filter: brightness(0%) blur(1vw);
+        transform: scale(1 1.2);
+        opacity: 0.25;
+      }
+    }
+  }
+
+  @media #{$xl_up} {
+    .navbar-brand {
+      @include calcVW(width, 300px, $xl);
+    }
+
+    .nav-link {
+      @include calcFontVW(18, 1200);
+    }
+  }
+
+  @media #{$xx_up} {
+    .navbar-brand {
+      @include calcVW(width, 350px, $xx);
+      padding-bottom: 7.5%;
+    }
+
+    .nav-link {
+      @include calcFontVW(18, 1920);
+    }
+  }
+}
