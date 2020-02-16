@@ -8,11 +8,13 @@ var settings = {
 	scripts: true,
 	polyfills: true,
 	styles: true,
+	images: true,
 	svgs: true,
+	html: true,
+	fontawesome: true,
+	fonts: true,
 	copy: true,
-	reload: true,
-  html: true,
-	images: true
+	reload: true
 };
 
 
@@ -35,6 +37,10 @@ var paths = {
 	svgs: {
 		input: 'src/svg/*.svg',
 		output: 'dist/svg/'
+	},
+	images: {
+		input: 'src/images/*',
+		output: 'dist/images/'
 	},
 	copy: {
 		input: 'src/copy/**/*',
@@ -93,6 +99,9 @@ var postcss = require('gulp-postcss');
 var prefix = require('autoprefixer');
 var minify = require('cssnano');
 
+//Images
+var imagemin = require('gulp-image');
+
 // SVGs
 var svgmin = require('gulp-svgmin');
 
@@ -114,7 +123,28 @@ var cleanDist = function (done) {
 
 	// Clean the dist folder
 	del.sync([
-		paths.output
+		paths.scripts.output,
+		paths.styles.output,
+		paths.svgs.output,
+		'dist/*',
+		'!dist',
+		'!dist/img'
+	]);
+
+	// Signal completion
+	return done();
+
+};
+
+// Remove pre-existing content from image folders
+var cleanImages = function (done) {
+
+	// Make sure this feature is activated before running
+	if (!settings.clean) return done();
+
+	// Clean the dist folder
+	del.sync([
+		paths.images.output
 	]);
 
 	// Signal completion
@@ -224,6 +254,19 @@ var buildStyles = function (done) {
 
 };
 
+// Optimize Images
+var buildImages = function (done) {
+
+	// Make sure this feature is activated before running
+	if (!settings.images) return done();
+
+	// Optimize SVG files
+	return src(paths.images.input)
+		.pipe(imagemin())
+		.pipe(dest(paths.images.output));
+
+};
+
 // Optimize SVG files
 var buildSVGs = function (done) {
 
@@ -279,17 +322,17 @@ var copyFiles = function (done) {
 };
 
 
-// Copy image files into output folder
-var images = function (done) {
-
-  // Make sure this feature is activated before running
-  if (!settings.images) return done();
-
-  // Copy static files
-  return src(paths.images.input)
-      .pipe(dest(paths.images.output));
-
-};
+// // Copy image files into output folder
+// var images = function (done) {
+//
+//   // Make sure this feature is activated before running
+//   if (!settings.images) return done();
+//
+//   // Copy static files
+//   return src(paths.images.input)
+//       .pipe(dest(paths.images.output));
+//
+// };
 
 // Watch for changes to the src directory
 var startServer = function (done) {
@@ -318,7 +361,13 @@ var reloadBrowser = function (done) {
 
 // Watch for changes
 var watchSource = function (done) {
-	watch(paths.input, series(exports.default, reloadBrowser));
+	watch(paths.input, series(exports.files, reloadBrowser));
+	done();
+};
+
+// Watch for image changes
+var watchImages = function (done) {
+	watch(paths.images.input, series(exports.images, reloadBrowser));
 	done();
 };
 
@@ -327,25 +376,47 @@ var watchSource = function (done) {
  * Export Tasks
  */
 
-// Default task
-// gulp
-exports.default = series(
+// Build Files Task
+// gulp files
+exports.files = series(
 	cleanDist,
 	parallel(
 		buildScripts,
 		lintScripts,
 		buildStyles,
 		buildSVGs,
-    html,
-		copyFiles,
-		images
+		// fontAwesome,
+		// fontCopy,
+		// copyFiles,
+		html
 	)
+);
+
+// Build Images Task
+// gulp images
+exports.images = series(
+	cleanImages,
+	buildImages
+);
+
+// Default task
+// gulp
+exports.default = series(
+	// copyScripts,
+	exports.files,
+	exports.images
 );
 
 // Watch and reload
 // gulp watch
 exports.watch = series(
-	exports.default,
+	// copyScripts,
+	exports.files,
+	exports.images,
 	startServer,
-	watchSource
+	parallel(
+		watchSource,
+		watchImages
+	)
 );
+
