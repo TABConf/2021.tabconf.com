@@ -1,0 +1,50 @@
+@@include('./inc/header.html', {
+  "title": "Register",
+  "slug": "register",
+  "template": "default",
+  "description": "TABConf 2020 is comprised of multiple camps where everyone can learn blockchain technologies hands-on with other crypto enthusiasts. Earn your badge from every camp for a chance at winning the final prize."
+})
+  @@include('./inc/default_header.html', {
+  "title": "Register",
+  "subtitle": "Don't trust &mdash; verify!"
+  })
+
+  <div class="container-fluid default-content">
+    <div class="row">
+      <div class="col-md-8 col-lg-6 order-2 order-md-1">
+        <p>You can register for TABConf 2020 one of three ways: using Eventbrite, Globee, or Bitpay.</p>
+
+        <h2>Pricing</h2>
+        <p><strong>$99</strong> if you pay with fiat.</p>
+        <p><strong>$75</strong> if you pay with cryptocurrency.</p>
+
+
+        <p><a href="https://www.eventbrite.com/e/tabconf-2020-tickets-71925433909"
+             class="btn btn-primary btn-lg" target="_blank">
+            <i class="fas fa-calendar-plus"></i> Pay with Eventbrite <strong>$99</strong>
+          </a></p>
+
+        <p><a href="https://globee.com/donate/E7XvVd5w0DaXPqRW9kZM2K" class="btn btn-primary btn-lg" target="_blank">
+            <i class="fas fa-coins"></i> Pay with Globee <strong>$75</strong>
+          </a></p>
+
+          <form action="https://bitpay.com/checkout" method="post" id="bitpay">
+            <input type="hidden" name="action" value="checkout" />
+            <input type="hidden" name="posData" value="" />
+            <input type="hidden" name="data" value="eDQvT3lfYDCNGU2z/qxqdtYd067VI8UdNXikeg2g7Okp1Rk55gSKwTPvtzLTTMwdw2dI8dg+rTTwENTBUHFmRowPKwKKhtLo6LqBQXaIWOsubSvVCr6Y+1nKzIWfPgnW8BNWd0MBhC/YSJYh2Bg/rg==" />
+            <button class="btn btn-primary btn-lg" name="submit"><i class="fab fa-bitcoin"></i> Pay with Bitpay <strong>$75</strong></button>
+          </form>
+
+
+
+      </div>
+      <div class="col-md-4 col-lg-6 order-1 order-md-2">
+        <img src="images/sponsor-hall-04_4x3.jpg" alt="Sponsor Hall" class="clip path-2 featured" />
+      </div>
+    </div>
+  </div>
+
+  <br>
+  <br>
+
+@@include('./inc/footer.html')
