@@ -8,3 +8,17 @@ body {
   @include fonts_responsive(18px);
 }
 
+blockquote {
+  font-style: italic;
+  @include calcVW(padding-left, 12px, $lg);
+  @include calcVW(margin-left, 12px, $lg);
+  border-left: 1px solid fade_out($color-white, 0.5);
+}
+
+strong {
+  font-weight: bold;
+}
+
+blockquote, p {
+  @include calcVW(margin-bottom, 18px, $md);
+}
