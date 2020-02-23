@@ -124,7 +124,7 @@ var cleanDist = function (done) {
 		paths.svgs.output,
 		'dist/*',
 		'!dist',
-		'!dist/img'
+		'!dist/images'
 	]);
 
 	// Signal completion
