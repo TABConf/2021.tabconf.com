@@ -18,6 +18,12 @@ body.default {
     padding-right: 0;
     padding-bottom: 40vw;
     padding-top: 0;
+
+    .divider {
+      &.flipped {
+        transform: translateY(-1px) rotate(180deg);
+      }
+    }
   }
 
   .default-header {
