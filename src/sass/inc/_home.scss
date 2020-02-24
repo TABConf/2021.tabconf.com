@@ -1,0 +1,125 @@
+body.home {
+
+  .hero {
+    @include calcVW(padding-left, 60px, $lg);
+    @include calcVW(padding-right, 60px, $lg);
+    background-image: url('../images/tabconf-network.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    min-height: 50vh;
+    padding-bottom: 20vw;
+    padding-top: 25vw;
+    position: relative;
+    
+    .divider {
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      transform: translateY(1px);
+    }
+    
+    .subtitle {
+      font-size: 1.5rem;
+    }
+  }
+
+  .intro {
+    .row {
+      &:last-child {
+        margin-bottom: 10vw;
+      }
+    }
+  }
+
+  .navbar {
+    > .navbar-brand {
+      display: none;
+    }
+  }
+
+  @media #{$md_up} {
+    img {
+      &.featured {
+        transform: translate(-20%, -85%);
+        width: 150%;
+      }
+    }
+
+    .hero {
+      padding-top: 15vw;
+      padding-bottom: 20vw;
+    }
+
+    .intro {
+      .row {
+        &:last-child {
+          margin-bottom: 20vw;
+
+          .btn-primary {
+            display: block;
+            width: 75%;
+            margin: auto;
+          }
+        }
+      }
+    }
+  }
+
+  @media #{$lg_up} {
+    img {
+      &.featured {
+        width: 100%;
+      }
+    }
+
+    .intro {
+      .row {
+        &:last-child {
+          margin-bottom: 10vw;
+
+          .btn-primary {
+            //width: 50%;
+          }
+        }
+      }
+    }
+
+    .navbar-brand {
+      display: none;
+    }
+  }
+
+  @media #{$xl_up} {
+    .hero {
+      padding-top: 10vw;
+      padding-bottom: 12vw !important;
+    }
+
+    .intro {
+      .row {
+        &:last-child {
+          margin-bottom: 10vw;
+
+          .btn-primary {
+            width: 50%;
+          }
+        }
+      }
+    }
+  }
+
+  @media #{$xx_up} {
+    img {
+      &.featured {
+        width: 75%;
+      }
+    }
+
+    .intro {
+      .main {
+        padding: 0 10vw;
+      }
+    }
+  }
+}

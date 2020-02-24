@@ -45,6 +45,8 @@
 		"node-sass": "4.13.0"
 	},
 	"dependencies": {
+		"@fortawesome/fontawesome-free": "^5.12.1",
+		"fontawesome": "^5.6.3",
 		"gulp-image": "^6.0.0"
 	}
 }

@@ -22,3 +22,7 @@ strong {
 blockquote, p {
   @include calcVW(margin-bottom, 18px, $md);
 }
+
+.btn-lg {
+  @include fonts_responsive(24px);
+}

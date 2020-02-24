@@ -111,44 +111,43 @@ body
   padding: 1rem
   text-align: center
 
+  .icon
+    width: 100%
+    height: 0
+    display: block
+    padding-bottom: 100%
+    background-size: 55% 55%
+    background-repeat: no-repeat
+    background-position: center
+    border-radius: 60%
+    margin-bottom: 1rem
+
   &.lightning
-    *[class*="fa-"]
-      background: $color-lightning
+    .icon
+      background-image: url('../svg/bolt-solid.svg')
+      background-color: $color-lightning
 
   &.spice
-    *[class*="fa-"]
-      background: $color-spice
+    .icon
+      background-color: $color-spice
+      background-image: url('../svg/pepper-hot-solid.svg')
+      color: $color-white
 
   &.dapp
-    *[class*="fa-"]
-      background: $color-dapp
+    .icon
+      background-color: $color-dapp
+      background-image: url('../svg/cog-solid.svg')
 
   &.privacy
-    *[class*="fa-"]
-      background: $color-privacy
+    .icon
+      background-color: $color-privacy
+      background-image: url('../svg/lock-solid.svg')
 
   &.art
-    *[class*="fa-"]
-      background: $color-art
+    .icon
+      background-color: $color-art
+      background-image: url('../svg/palette-solid.svg')
 
-  *[class*="fa-"]
-    // background: $primary
-    // padding: 3rem
-    // border-radius: 7.5rem
-    // width: 10rem
-    // height: 10rem
-    // box-shadow: 5px 5px 10px rgba(0,0,0,0.25)
-    // display: block
-    // margin: 0 auto 1rem
-    background: $primary
-    padding: 13vw
-    border-radius: 32vw
-    width: 42vw
-    height: 42vw
-    box-shadow: 5px 5px 10px rgba(0,0,0,0.25)
-    display: block
-    margin: 0 auto 4vw
-    font-size: 15vw
 
   a
     text-decoration: none
@@ -170,6 +169,9 @@ body
       border-radius: 6vw
       font-size: 5vw
 
+  @media #{$lg_up}
+    font-size: 1.5vw
+
 .camp-list
   text-align: center
 
@@ -183,25 +185,8 @@ body
 .container
   //max-width: none
 
-.hero
-  background-image: url('../images/tabconf-network.png')
-  background-size: cover
-  background-repeat: no-repeat
-  background-position: center
-  padding: 0
-  min-height: 50vh
-  padding-bottom: 20vw !important
 
-  .subtitle
-    font-size: 1.5rem
-
-  @media #{$md_up}
-    padding-top: 15vw
-    padding-bottom: 20vw !important
-
-  @media #{$lg_up}
-    padding-left: 5vw
-    padding-right: 5vw
+//    padding-right: 5vw
 
 
 img
@@ -260,7 +245,7 @@ img
   padding: 0
 
 .metadata
-  margin: 0 1rem 0 0
+  margin: 0 1rem 1rem 0
   display: flex
   align-items: center
 
@@ -268,13 +253,44 @@ img
     background-color: $color-green
     color: $color-blue
     margin-right: 0.5rem
-    padding: 0.5rem
-    width: 2rem
-    height: 2rem
-    border-radius: 1rem
+    //padding: 0.5rem
+    //width: 2rem
+    //height: 2rem
+    //border-radius: 1rem
+    text-align: center
+    width: 10vw;
+    height: 10vw;
+    padding: 2.5vw;
+    border-radius: 10vw;
+
+    @media #{$md_up}
+      width: 6vw
+      height: 6vw
+      padding: 1.75vw
+      border-radius: 6vw
+
+    @media #{$lg_up}
+      width: 5vw
+      height: 5vw
+      padding: 1.5vw
+      border-radius: 5vw
+
+    @media #{$xl_up}
+      width: 4vw
+      height: 4vw
+      padding: 1.25vw
+      border-radius: 4vw
+
+    @media #{$xx_up}
+      width: 3vw
+      height: 3vw
+      padding: 1vw
+      border-radius: 3vw
+
 
 .metadata-group
   display: flex
+  flex-wrap: wrap
 
 p
   &:last-child
