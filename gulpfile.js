@@ -97,6 +97,7 @@ var minify = require('cssnano');
 
 //Images
 var imagemin = require('gulp-image');
+var webp = require('gulp-webp');
 
 // SVGs
 var svgmin = require('gulp-svgmin');
@@ -263,6 +264,15 @@ var buildImages = function (done) {
 
 };
 
+var buildWebP = function (done) {
+	// Make sure this feature is activated before running
+	if (!settings.images) return done();
+
+	return src(paths.images.input)
+			.pipe(webp())
+			.pipe(dest(paths.images.output));
+};
+
 // Optimize SVG files
 var buildSVGs = function (done) {
 
@@ -392,7 +402,8 @@ exports.files = series(
 // gulp images
 exports.images = series(
 	cleanImages,
-	buildImages
+	buildImages,
+	buildWebP
 );
 
 // Default task

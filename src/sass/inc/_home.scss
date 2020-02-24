@@ -39,7 +39,7 @@ body.home {
   }
 
   @media #{$md_up} {
-    img {
+    img, picture {
       &.featured {
         transform: translate(-20%, -85%);
         width: 150%;
@@ -67,7 +67,7 @@ body.home {
   }
 
   @media #{$lg_up} {
-    img {
+    img, picture {
       &.featured {
         width: 100%;
       }
@@ -110,7 +110,7 @@ body.home {
   }
 
   @media #{$xx_up} {
-    img {
+    img, picture {
       &.featured {
         width: 75%;
       }

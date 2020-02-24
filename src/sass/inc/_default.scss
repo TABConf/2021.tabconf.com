@@ -79,7 +79,7 @@ body.default {
 
   @media #{$md_up} {
     .default-content {
-      img {
+      img, picture {
         &.featured {
           transform: translate(-20%, -85%);
           width: 200%;
@@ -94,7 +94,7 @@ body.default {
 
   @media #{$lg_up} {
     .default-content {
-      img {
+      img, picture {
         &.featured {
           transform: translate(0%, -65%);
           width: 100%;
@@ -113,7 +113,7 @@ body.default {
   }
   @media #{$xx_up} {
     .default-content {
-      img {
+      img, picture {
         &.featured {
           transform: translate(0%, -50%);
         }
