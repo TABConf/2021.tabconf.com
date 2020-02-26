@@ -47,6 +47,7 @@
 	"dependencies": {
 		"@fortawesome/fontawesome-free": "^5.12.1",
 		"fontawesome": "^5.6.3",
+		"gulp-cli": "^2.2.0",
 		"gulp-image": "^6.0.0",
 		"gulp-webp": "^4.0.1"
 	}
