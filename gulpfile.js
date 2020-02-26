@@ -393,7 +393,7 @@ exports.files = series(
 		buildSVGs,
 		// fontAwesome,
 		// fontCopy,
-		// copyFiles,
+		copyFiles,
 		html
 	)
 );
