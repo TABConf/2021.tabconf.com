@@ -1,0 +1,34 @@
+@mixin calcVW($property, $px_size, $screen_size) {
+  #{$property}: (($px_size/$screen_size)*100)+vw;
+}
+
+@mixin calcFontVW($px_size, $screen_size) {
+  font-size: (($px_size/$screen_size)*100)+vw;
+}
+
+
+@mixin fonts_responsive($px_size) {
+  //font-size: (($px_size/375)*100)+vw;
+  @include calcVW(font-size, $px_size, 375px);
+
+  @media #{$md_up} {
+    @include calcVW(font-size, $px_size, $md);
+  }
+
+  @media #{$lg_up} {
+    @include calcVW(font-size, $px_size, $lg);
+  }
+
+  @media #{$xl_up} {
+    @include calcVW(font-size, $px_size, $xl);
+  }
+
+  @media #{$xx_up} {
+    @include calcVW(font-size, $px_size, $xx);
+  }
+}
+
+@mixin hidden {
+  position: absolute;
+  left: -999rem;
+}

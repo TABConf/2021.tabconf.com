@@ -1,0 +1,102 @@
+@@include('./inc/header.html', {
+  "title": "Home",
+  "slug": "home",
+  "template": "home",
+  "description": "TABConf 2020 is comprised of multiple camps where everyone can learn blockchain technologies hands-on with other crypto enthusiasts. Earn your badge from every camp for a chance at winning the final prize."
+})
+
+  <div class="container-fluid hero">
+    <div class="row">
+      <div class="col-md-8 col-lg-7 col-xl-6">
+        <h1 class="sr-only">TABConf 2020</h1>
+        <img src="svg/TABConf-2020-Logo_Color-Dark.svg" alt="TABConf 2020" />
+        <p class="subtitle">The Blockchain Conference of&nbsp;Camps</p>
+        <p class="metadata-group">
+          <span class="metadata">
+            <i class="fas fa-calendar"></i> September 15-16,&nbsp;2020
+          </span>
+          <span class="metadata">
+            <i class="fas fa-map-marker"></i> Atlanta,&nbsp;GA
+          </span>
+        </p>
+        <a href="register.html" class="btn btn-primary btn-lg">Register Now <i class="fas fa-user-plus"></i></a>
+      </div>
+    </div>
+
+    <div class="divider shape-divider-1">
+      <div class="divider-shadow"></div>
+      <div class="divider-bg"></div>
+    </div>
+  </div>
+
+  <div class="container-fluid intro">
+    <div class="row">
+      <div class="col-md-6 main">
+        <h2>Explore decentralized technology in hands-on workshops, discussions, and
+        hackathons.</h2>
+
+        <p>Hey, want to come listen to a bunch of fake thought leaders regurgitate
+        impractical ideas about blockchain? No? Then this is the unconference for
+        you. TABConf 2020 is divided into multiple camps where everyone can learn
+        blockchain technologies hands-on with other crypto enthusiasts. Earn your
+        badge from every camp for a chance at winning the final&nbsp;prize.</p>
+      </div>
+      <div class="col-md-6">
+        <picture class="clip path-2 featured" id="intro-image">
+          <source srcset="images/speakers-02_4x3.webp" type="image/webp">
+          <source srcset="images/speakers-02_4x3.jpg" type="image/jpeg">
+          <img src="images/speakers-02_4x3.jpg" alt="Speakers from TABConf 2019">
+        </picture>
+      </div>
+    </div>
+    <div class="row camp-list">
+<!--      <div class="col-md-1"></div>-->
+      <div class="col-md-4 col-lg-2 offset-lg-1">
+        @@include('./inc/campicon.html', {
+          "title": "Lightning",
+          "link": "camps.html#lightning",
+          "slug": "lightning",
+          "icon": "bolt"
+        })
+      </div>
+      <div class="col-md-4 col-lg-2">
+        @@include('./inc/campicon.html', {
+          "title": "Spice",
+          "link": "camps.html#spice",
+          "slug": "spice",
+          "icon": "pepper-hot"
+        })
+      </div>
+      <div class="col-md-4 col-lg-2">
+        @@include('./inc/campicon.html', {
+          "title": "Dapp",
+          "link": "camps.html#dapp",
+          "slug": "dapp",
+          "icon": "cog"
+        })
+      </div>
+      <div class="col-md-4 col-lg-2 offset-md-2 offset-lg-0">
+        @@include('./inc/campicon.html', {
+          "title": "Privacy",
+          "link": "camps.html#privacy",
+          "slug": "privacy",
+          "icon": "lock"
+        })
+      </div>
+      <div class="col-md-4 col-lg-2">
+        @@include('./inc/campicon.html', {
+          "title": "Art",
+          "link": "camps.html#art",
+          "slug": "art",
+          "icon": "palette"
+        })
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-6 offset-md-3">
+        <a href="register.html" class="btn btn-primary btn-lg">Register Now <i class="fas fa-user-plus"></i></a>
+      </div>
+    </div>
+  </div>
+
+@@include('./inc/footer.html')

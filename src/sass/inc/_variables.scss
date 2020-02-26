@@ -1,0 +1,52 @@
+$color-blue: #004659;
+$color-blue-dark: darken($color-blue, 10%);
+$color-green: #40FF98;
+$color-orange: #fc4600;
+$color-white: #fff;
+$color-lightning: #E6D300;
+$color-spice: #FF5319;
+$color-dapp: #00FF40;
+$color-privacy: #00E6C7;
+$color-art: #AE4DFF;
+
+$primary: $color-orange;
+// $secondary:     $gray-600 !default
+// $success:       $green !default
+// $info:          $cyan !default
+// $warning:       $yellow !defaul
+// $danger:        $red !default
+// $light:         $gray-100 !default
+// $dark:          $gray-800 !default
+
+
+
+$font-code: 'Fira Mono', 'Courier', sans-serif;
+
+
+$path-1: polygon(5% 5%, 60% 0%, 90% 10%, 100% 50%, 90% 85%, 40% 95%, 10% 85%, 0% 45%);
+$path-2: polygon(5% 5%, 60% 0%, 90% 10%, 100% 50%, 90% 85%, 40% 95%, 10% 85%, 0% 45%);
+
+//Breakpoint Sizes
+$grid-breakpoints: (
+xs: 0,
+sm: 576px,
+md: 768px,
+lg: 992px,
+xl: 1200px,
+xx: 1920px
+) !default;
+
+$sm: map_get($grid-breakpoints, sm);
+$md: map_get($grid-breakpoints, md);
+$lg: map_get($grid-breakpoints, lg);
+$xl: map_get($grid-breakpoints, xl);
+$xx: map_get($grid-breakpoints, xx);
+
+//Breakpoint Queries
+$sm_up: screen and (min-width: $sm);
+$md_up: screen and (min-width: $md);
+$lg_up: screen and (min-width: $lg);
+$xl_up: screen and (min-width: $xl);
+$xx_up: screen and (min-width: $xx);
+
+$lg_down: screen and (max-width: $lg - 1px);

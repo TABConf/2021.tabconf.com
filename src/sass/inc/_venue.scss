@@ -1,0 +1,15 @@
+body.venue {
+  .wrapper {
+    .container-fluid {
+      &:first-of-type {
+        .bg {
+          background-image: url('../images/gwcc-2.jpg');
+        }
+      }
+    }
+  }
+
+  .default-footer {
+    background-image: url('../images/gwcc-1.jpg');
+  }
+}

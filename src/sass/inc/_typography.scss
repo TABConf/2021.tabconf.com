@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300i,600,600i&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Fira+Mono:400,700&display=swap');
+
+body {
+  color: #fff;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 300;
+  @include fonts_responsive(18px);
+}
+
+blockquote {
+  font-style: italic;
+  @include calcVW(padding-left, 12px, $lg);
+  @include calcVW(margin-left, 12px, $lg);
+  border-left: 1px solid fade_out($color-white, 0.5);
+}
+
+strong {
+  font-weight: bold;
+}
+
+blockquote, p {
+  @include calcVW(margin-bottom, 18px, $md);
+}
+
+.btn-lg {
+  @include fonts_responsive(24px);
+}
