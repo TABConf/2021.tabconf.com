@@ -28,3 +28,6 @@
 
 1. Run `gulp` and deploy the contents of the `/dist` folder it creates.
 2. Or, you can use the same `/dist` folder that `gulp watch` creates.
+
+### update gh-pages branch
+1. `git subtree push --prefix dist origin gh-pages`
