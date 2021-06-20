@@ -1,0 +1,15 @@
+body.opennode-completed {
+  .default-header {
+    .bg {
+      background-image: url('../images/registration-01_16x9.jpg') !important;
+      filter: blur(3px);
+    }
+  }
+
+  .default-footer {
+    //.bg {
+      background-image: url('../images/sponsor-hall.jpg') !important;
+      filter: blur(3px);
+    //}
+  }
+}

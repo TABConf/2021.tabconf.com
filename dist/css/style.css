@@ -956,3 +956,17 @@ body.register .default-footer {
   -webkit-filter: blur(3px);
           filter: blur(3px);
 }
+
+/* line 3, src/sass/inc/_opennode-completed.scss */
+body.opennode-completed .default-header .bg {
+  background-image: url("../images/registration-01_16x9.jpg") !important;
+  -webkit-filter: blur(3px);
+          filter: blur(3px);
+}
+
+/* line 9, src/sass/inc/_opennode-completed.scss */
+body.opennode-completed .default-footer {
+  background-image: url("../images/sponsor-hall.jpg") !important;
+  -webkit-filter: blur(3px);
+          filter: blur(3px);
+}
