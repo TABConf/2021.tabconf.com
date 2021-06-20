@@ -2,18 +2,19 @@
   "title": "Home",
   "slug": "home",
   "template": "home",
-  "description": "TABConf 2020 is comprised of multiple camps where everyone can learn blockchain technologies hands-on with other crypto enthusiasts. Earn your badge from every camp for a chance at winning the final prize."
+  "description": "TABConf 2021 is comprised of multiple villages and stages where everyone can learn about Bitcoin and Crypto technologies hands-on with other crypto enthusiasts. Earn your badge from every village community to earn a final prize."
 })
 
   <div class="container-fluid hero">
     <div class="row">
       <div class="col-md-8 col-lg-7 col-xl-6">
-        <h1 class="sr-only">TABConf 2020</h1>
-        <img src="svg/TABConf-2020-Logo_Color-Dark.svg" alt="TABConf 2020" />
-        <p class="subtitle">The Blockchain Conference of&nbsp;Camps (Currently postponed until 2021)</p>
+        <h1 class="sr-only">TABConf 2021</h1>
+        <img src="svg/tabconf-2021-logo.svg" alt="TABConf 2021" />
+        <p class="subtitle">
+          <strong>T</strong>he <strong>A</strong>tlanta <strong>B</strong>itcoin Conference<br>Building Communities, Discussions of&nbsp;Substance</p>
         <p class="metadata-group">
           <span class="metadata">
-            <i class="fas fa-calendar"></i> Dates TBD,&nbsp;(tentative Q1 2021)
+            <i class="fas fa-calendar"></i> November 4 - 6, 2021
           </span>
           <span class="metadata">
             <i class="fas fa-map-marker"></i> Atlanta,&nbsp;GA
@@ -36,48 +37,41 @@
         hackathons.</h2>
 
         <p>Hey, want to come listen to a bunch of fake thought leaders regurgitate
-        impractical ideas about blockchain? No? Then this is the unconference for
-        you. TABConf 2020 is divided into multiple camps where everyone can learn
-        blockchain technologies hands-on with other crypto enthusiasts. Earn your
-        badge from every camp for a chance at winning the final&nbsp;prize.</p>
+          impractical ideas about blockchain? No? Then this is the unconference for
+          you. TABConf 2021 is comprised of multiple villages and stages where everyone 
+          can learn about Bitcoin and Crypto technologies hands-on with other crypto enthusiasts. 
+          Earn your badge from every village community to earn a final&nbsp;prize.</p>
+        
       </div>
-      <div class="col-md-6">
+      <div class="col-md-6 image-offset-column">
         <picture class="clip path-2 featured" id="intro-image">
           <source srcset="images/speakers-02_4x3.webp" type="image/webp">
-          <source srcset="images/speakers-02_4x3.jpg" type="image/jpeg">
+          <source srcset="images/2019/speakers-02_4x3.jpg" type="image/jpeg">
           <img src="images/speakers-02_4x3.jpg" alt="Speakers from TABConf 2019">
         </picture>
       </div>
     </div>
     <div class="row camp-list">
-<!--      <div class="col-md-1"></div>-->
-      <div class="col-md-4 col-lg-2 offset-lg-1">
+
+      <div class="col-md-4 col-lg-2 offset-md-2 offset-lg-2">
         @@include('./inc/campicon.html', {
-          "title": "Lightning",
-          "link": "camps.html#lightning",
-          "slug": "lightning",
-          "icon": "bolt"
-        })
-      </div>
-      <div class="col-md-4 col-lg-2">
-        @@include('./inc/campicon.html', {
-          "title": "Spice",
-          "link": "camps.html#spice",
-          "slug": "spice",
-          "icon": "pepper-hot"
-        })
-      </div>
-      <div class="col-md-4 col-lg-2">
-        @@include('./inc/campicon.html', {
-          "title": "Dapp",
-          "link": "camps.html#dapp",
-          "slug": "dapp",
+          "title": "Socratic Discussions",
+          "link": "camps.html#socratic",
+          "slug": "socratic",
           "icon": "cog"
+        })
+      </div>
+      <div class="col-md-4 col-lg-2">
+        @@include('./inc/campicon.html', {
+          "title": "Bitcoin & Gaming",
+          "link": "camps.html#gamer",
+          "slug": "gamer",
+          "icon": "game-controller"
         })
       </div>
       <div class="col-md-4 col-lg-2 offset-md-2 offset-lg-0">
         @@include('./inc/campicon.html', {
-          "title": "Privacy",
+          "title": "Privacy Village",
           "link": "camps.html#privacy",
           "slug": "privacy",
           "icon": "lock"
@@ -85,10 +79,10 @@
       </div>
       <div class="col-md-4 col-lg-2">
         @@include('./inc/campicon.html', {
-          "title": "Art",
-          "link": "camps.html#art",
-          "slug": "art",
-          "icon": "palette"
+          "title": "Idea for Camp? Contact Us",
+          "link": "camps.html#placeholder",
+          "slug": "placeholder",
+          "icon": "question"
         })
       </div>
     </div>

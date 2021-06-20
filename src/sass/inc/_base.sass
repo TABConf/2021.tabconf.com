@@ -160,6 +160,21 @@ body
       background-color: $color-art
       background-image: url('../svg/palette-solid.svg')
 
+  &.gamer
+    .icon
+      background-color: $color-gamer
+      background-image: url('../svg/game-controller.svg')
+
+  &.socratic
+    .icon
+      background-color: $color-socratic
+      background-image: url('../svg/chat.svg')
+
+  &.placeholder
+    .icon
+      background-color: $color-placeholder
+      background-image: url('../svg/question.svg')
+
 
   a
     text-decoration: none
@@ -200,6 +215,10 @@ body
 
 //    padding-right: 5vw
 
+.image-offset-column
+  @media #{$lg_up}
+    height: 0
+    padding-bottom: 25% !important
 
 img, picture
   display: block

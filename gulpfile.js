@@ -48,7 +48,7 @@ var paths = {
 	},
 	reload: './dist/',
 	html: {
-		input: 'src/html/**/*',
+		input: ['src/html/**/*', '!src/html/inc/**'],
 		output: 'dist/'
 	}
 };
